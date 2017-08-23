@@ -1,11 +1,16 @@
-
-.header-ft {
+html, body{
+  background-color: #E9EBEE;
+}
+//header div
+.header {
   background-image: url("../images/954443-sri-lanka.jpg");
   background-size: 100% 100%;
   min-height: 650px;
   position: relative;
   background-repeat: no-repeat;
+  margin-bottom: 150px;
 }
+//navigational bar
 nav {
   max-width: auto;
   width: 100%;
@@ -53,25 +58,77 @@ nav .dropdown a {
     text-decoration: none;
     display: block;
     font-size: 15px;
+    text-align: center;
 }
 .dropdown {
     position: relative;
     display: inline-block;
 }
-.dropdown-content li:hover {background-color: #80C8F0;}
+.dropdown-content li:hover {
+  background-color: #80C8F0;
+}
 .dropdown:hover .dropdown-content {
     display: block;
+    padding: 0;
 }
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-
-.header-ft img{
+//logo
+.header img{
   width: 300px;
-  height: 300px;
+  min-height: 300px;
   position: absolute;
   top: 40%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+//middle changing pictures
+.header .insertPicture {
+  background-image: url("../images/header-image-04-0x288.jpg");
+  min-width: 400px;
+  min-height: 200px;
+  max-width: 500px;
+  max-height: 400px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: right;
+  top: 95%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow:10px 16px 16px 1px rgba(0,0,0,0.2);
+
+}
+h1.quote {
+  text-align: center;
+  font-family: italic;
+  margin-bottom: 50px;
+}
+//start of container
+.container img {
+  width: 32%;
+  height: 300px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.container h1 {
+  text-align: center;
+}
+.container p {
+  font-weight: 600;
+  font-family: italic;
+  font-size: 20px;
+}
+.container span {
+  margin-left: 10px;
+}
+
+//footer
+.footer {
+  width: 100%;
+  height: auto;
+  background-color:#64A843;
 }
