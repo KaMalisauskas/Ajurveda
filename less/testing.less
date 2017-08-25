@@ -1,0 +1,65 @@
+// .section {
+//   font-size: 10px;
+// }
+// .section  > * {
+//   color:red;
+// }
+// .section p {
+//   background-color: red;
+// }
+
+// LESS
+//var
+@main-color: red;
+@margin: 40px;
+//nesting
+.mixin-name() {
+  width: ~"calc(100% - @{margin})";
+  height: 100px;
+  background-color: green;
+}
+.section {
+  font-size: 10px;
+
+  > * {
+    color:@main-color;
+  }
+  p {
+    background-color: red;
+  }
+  .margin {
+    .mixin-name();
+  }
+  // &.class {
+  //   nepadaro tarpo tarpklases
+  // }
+  //funkcijos
+  .margin {
+    // &:hover {
+    //   background-color: darken(@main-color, 10%)''
+    // }   ant hover patamsina 10%spalava;
+  }
+}
+//funkcijos (mixxin)
+.grid-flex(@basis, @color) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex-basis: @basis;
+
+    &:nth-child(odd) {
+      background-color: @color;
+    }
+  }
+}
+.flex {
+  .grid-flex(25%, red);
+
+  @media all and (min-width: 568px) and (max-width:767px) {
+    .grid-flex(50%, green);
+  }
+  @media all and (max-width: 567px) {
+    .grid-flex(100%, blue);
+  }
+}
