@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Apie Viešbuti</title>
+  <title>Gallery</title>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <meta name="viewport" contenet="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="description" contenet="Our hotel is one of the finnest ayurveda hotels">
@@ -16,10 +16,10 @@
     <nav>
 
         <ul class="ul-nav">
-            <li class="dropdown"><a href="#"> Viešbutis</a>
+            <li class="dropdown"><a href="index.html"> Viešbutis</a>
               <ul class="dropdown-content">
-                <li><a href="#">Apie viesbuti</a></li>
-                <li><a href="#">Paslaugos</a></li>
+                <li><a href="index.html">Apie viesbuti</a></li>
+                <li><a href="service.html">Paslaugos</a></li>
                 <li><a href="#">Kainos</a></li>
               </ul>
             </li>
@@ -33,7 +33,7 @@
             </ul>
           </li>
 
-          <li class="dropdown"><a href="#">Fotografija </a></li>
+          <li class="dropdown"><a href="#">Galerija </a></li>
 
           <li class="dropdown"><a href="#">Atsiliepimai</a>
             <ul class="dropdown-content">
@@ -49,71 +49,53 @@
         </ul>
 
     </nav>
-    <a href="#"><img src="images/ayurveda-logo2-245-240.png" alt="Logo"></a>
+    <a href="index.html"><img src="../images/ayurveda-logo2-245-240.png" alt="Logo"></a>
     <div class="insertPicture" id="fade" onclick="changeImg()">
     </div>
+
   </div>
 
-  <div class="about">
-    <h1>About resort</h1>
-    <div class="aboutDescription">
-      <p> <span>Peacock </span> Ayurveda Garden is an Ayurveda resort in Sri Lanka. The resort is located in the
-        south side of the country, only 4 km away from the town of Dickwella. This small and lovely
-        town, caressed by the waves of the Indian Ocean, is with a coral reef gulf and breathtaking
-        powdery white sand beaches.</p>
-    </div>
+  <h1 class="gallery">Gallery</h1>
+
+  <div class="container_img">
+
+  <div class="container">
+    <img id="resize" src="../images/pool.jpg" alt="Avatar" class="image">
   </div>
 
-    <div class="container_img">
+  <div class="container">
+    <img src="../images/mountain.jpg" alt"Mountain" class="image">
+  </div>
+
+  <div class="container">
+    <img src="../images/train.jpg" alt="Train" class="image">
+  </div>
 
     <div class="container">
-      <a href="#"><img src="images/pool.jpg" alt="Avatar" class="image"></a>
-      <a href="#" class="overlay">
-        <div class="text">Hello World</div>
-      </a>
-    </div>
-
-    <div class="container">
-      <a href="#"><img src="images/mountain.jpg" alt"Mountain" class="image"></a>
-      <a href="#" class="overlay">
-        <div class="text">Hello World</div>
-      </a>
+      <img src="../images/elephant.jpg" alt="Elephant" class="image">
     </div>
 
     <div class="container">
-      <a href="#"><img src="images/train.jpg" alt="Train" class="image"></a>
-      <a href="#" class="overlay">
-        <div class="text">Hello World</div>
-      </a>
+      <img src="../images/streetMusic.jpg" alt"StreetMusic" class="image">
     </div>
 
-      <div class="container">
-        <a href="#"><img src="images/elephant.jpg" alt="Elephant" class="image"></a>
-        <a href="#" class="overlay">
-          <div class="text">Hello World</div>
-        </a>
-      </div>
-
-      <div class="container">
-        <a href="#"><img src="images/streetMusic.jpg" alt"StreetMusic" class="image"></a>
-        <a href="#" class="overlay">
-          <div class="text">Hello World</div>
-        </a>
-      </div>
-
-      <div class="container">
-        <a href="#"><img src="images/bath.jpg" alt="Bath" class="image"></a>
-        <a href="#" class="overlay">
-          <div class="text">Hello World</div>
-        </a>
-      </div>
-
+    <div class="container">
+      <img src="../images/bath.jpg" alt="Bath" class="image">
     </div>
 
+    <div class="container">
+      <img src="../images/bath.jpg" alt="Bath" class="image">
     </div>
 
-    <h1 class="quote">"The world is a book, and those who do not travel read only a page"</h1>
+    <div class="container">
+      <img src="../images/bath.jpg" alt="Bath" class="image">
+    </div>
 
+    <div class="container">
+      <img src="../images/bath.jpg" alt="Bath" class="image">
+    </div>
+
+  </div>
 
   <div class="footer">
 
@@ -141,6 +123,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="Js/index.js"></script>
+  <script src="../Js/index.js"></script>
 </body>
 </html>

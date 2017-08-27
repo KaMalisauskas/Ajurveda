@@ -11,3 +11,10 @@ function classToggle() {
     this.classList.toggle('insertPicture2');
 }
 document.querySelector('#fade').addEventListener('click', classToggle);
+
+
+function imgMax() {
+  var picture1 = this.classList.toggle("image");
+  this.classList.toggle("img_onClick");
+}
+document.querySelector("#resize").addEventListener("click", imgMax);

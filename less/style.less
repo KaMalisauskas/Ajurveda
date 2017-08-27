@@ -1,5 +1,6 @@
 @nav-color: #2F92CD;
 @shrift-color: #26683F;
+@font: italic;
 
 .grid-flex(@basis) {
   display: flex;
@@ -140,7 +141,13 @@ html, body{
 
    }
 }
-
+//
+.gallery {
+  text-align: center;
+  margin-bottom: 100px;
+  color:@shrift-color;
+  font-family: italic;
+}
 //about
 .about {
   padding:0 50px;
@@ -203,6 +210,12 @@ html, body{
       width: 100%;
       height: auto;
     }
+    .img_onClick {
+      width: 90%;
+      margin: 0 auto;
+      position: absolute;
+      -webkit-transition: all .4s ease-in;
+    }
     .overlay {
       position: absolute;
       bottom: 0;
@@ -231,6 +244,49 @@ html, body{
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
     }
+}
+.container-text {
+  width: 90%;
+  margin:0 auto;
+  padding: 40px 0;
+  color: @shrift-color;
+  font-family: @font;
+  font-size: 22px;
+
+
+  h3 {
+    font-size: 25px;
+    position: relative;
+    margin-top: 10px;
+  }
+  h1 {
+    text-align: center;
+  }
+  img {
+    width: 30%;
+    border-radius: 10px;
+    float: right;
+    margin-left: 10px;
+  }
+  p {
+    margin-bottom: 60px;
+    word-spacing: 5px;
+  }
+
+  .room_gallery {
+    width: 100%;
+    display: inline-block;
+
+    .room_img_container {
+      width: 32%;
+      display: inline-block;
+
+      img {
+        width: 100%;
+        margin-bottom: 60px;
+      }
+    }
+  }
 }
 
 h1.quote {
