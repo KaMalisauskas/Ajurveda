@@ -14,66 +14,90 @@ document.querySelector('#fade').addEventListener('click', classToggle);
 
 
 
-var pcs = [
-	{ "modelis":"lenovo idėja", "kaina":1234, "spalva":{"raudona":1,"žalia":2} },
-	{ "modelis":"hp monstras", "kaina":800, "spalva":{"juoda":2,"geltona":0} },
-	{ "modelis":"toshiba sriuba", "kaina":256, "spalva":{"mėlyna":3,"žalia":1} },
-	{ "modelis":"dell apskritimas", "kaina":697, "spalva":{"juoda":1,"balta":2} },
-	{ "modelis":"acer peizažas", "kaina":620, "spalva":{"juoda":4,"balta":2} },
-	{ "modelis":"apple 256", "kaina":2560, "spalva":{"balta":3,"juoda":1} },
-	{ "modelis":"asus pokšt", "kaina":1001, "spalva":{"juoda":2,"geltona":3} }
-];
+var posts = ["Sveikinu radus darbą", "Ar tikrai pabaigus kursą viskas bus gerai", "Javascript nėra Java", "Rasti video medžiagą visada šaunu", "Sveikinu radus darbą"];
 
-// var obj = [];
-// var arr = [ { modelis: [] } ];
-// var arrP = arr[0].modelis;
-// for (var i = 0; i < pcs.length;i++) {
-//     if (pcs[i].kaina * 2 <= 1600) {
-//       var Spalva = Object.keys(pcs[i].spalva);
-//
-//       for (var b = 0; b < Spalva.length; b++) {
-//         if ((Spalva[b] == "balta") || (Spalva[b] == "juoda") && (pcs[i].spalva[Spalva[b]] >= 2) ) {
-//             if (arr != pcs[i].modelis) {
-//             arrP.push(pcs[i].modelis);
-//             // for (var c = 0;c<arrP.length;c++) {
-//             //   if (arrP[c] == pcs[i].modelis) {
-//                 obj.push(pcs[i].modelis);
-//             //   }
-//             // }
-//
-//           }
-//
-//             }
-//         }
-//       }
-//     }
-//     console.log(arrP.length);
-// console.log(obj);
+function long(text) {
+    var longist = "";
+    var funny = [];
+    var final = " ";
 
+    for (var i = 0; i < posts.length;i++) {
 
-for (var i = 0; i < pcs.length;i++) {
+      var line = text[i].split(" ");
+      var current = 0;
+      var max = 0;
 
-   if (pcs[i].kaina * 2 <= 1600) {
+      for (var j = 0; j < line.length; j++) {
 
-     var Spalva = Object.keys(pcs[i].spalva);
+         var prev = max;
+          current = line[j].length;
 
+          if (current > prev) {
 
-     var temp = 0;
+            max = current;
 
-     for (var b = 0; b < Spalva.length; b++) {
-
-       if ((Spalva[b] == "balta") || (Spalva[b] == "juoda") && (pcs[i].spalva[Spalva[b]] >= 2) ) {
-
-         if (!temp >= 1 ) {
-
-           var modelis = "Modelis: " + pcs[i].modelis + " \n " + "Kaina: " + pcs[i].kaina * 2 + " \n " + "Spalva:" + Spalva[b];
-           temp++;
-
-         } else {
-            modelis = modelis + " ir " + Spalva[b] + " \n ";
-         }
-       }
-     }
-     console.log(modelis);
+            if( max == line[j].length) {
+              longist = line[j];
+            }
+          }
+      }
+      funny.push(longist);
     }
-   }
+    for (var k = 0; k <funny.length; k++) {
+      final = final + funny[k] + " ";
+    }
+    console.log(final);
+
+}
+// long(posts);
+
+function universal(text1) {
+
+  var longist = "";
+  var line = text1.split(" ");
+  var current = 0;
+  var max = 0;
+
+  for (var j = 0; j < line.length; j++) {
+
+     var prev = max;
+      current = line[j].length;
+
+      if (current > prev) {
+
+        max = current;
+
+        if( max == line[j].length) {
+          longist = line[j];
+        }
+      }
+  } return longist;
+}
+
+  var final = [];
+  var finaly = "";
+
+for (var i = 0; i < posts.length;i++) {
+     var simple =universal(posts[i]);
+     final.push(simple);
+}
+
+for (var k = 0; k <final.length; k++) {
+  finaly = finaly + final[k] + " ";
+}
+
+console.log(finaly);
+
+
+
+// Turime masyvą, kuriame yra trumpos tekstinės eilutės (pateikta apačioje). Mūsų užduotis:
+// 1. Sukurti funkciją, kuri rastų ilgiausią žodį tekstinėje eilutėje
+// 2. Panaudojant šią funkciją išvesti kiekvienos eilutės ilgiausią žodį (rezultatas turi būti viena tekstinė eilutė)
+// 3. Išvedant žodžius panaudoti tarpą tarp žodžių
+// 4. Išvedimas turi būti dinamiškas (pasikeitus masyve esančių eilučių skaičiui - vis tiek gautume kiekvienos eilutės ilgiausią žodį)
+// 5. Rezultatą išvesti konsolėje
+//
+// // Masyvas
+// var posts = ["Sveikinu radus darbą", "Ar tikrai pabaigus kursą viskas bus gerai", "Javascript nėra Java", "Rasti video medžiagą visada šaunu"];
+//
+//

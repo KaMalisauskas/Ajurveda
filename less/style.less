@@ -18,6 +18,11 @@ html, body{
   background-repeat: no-repeat;
   margin-bottom: 200px;
 
+  @media all and (max-width: 600px) {
+    min-height: 300px;
+    margin-bottom: 50px;
+  }
+
   //navigational bar
   nav {
     max-width: auto;
@@ -102,6 +107,7 @@ html, body{
       top: 40%;
       left: 50%;
       margin-right: -50%;
+      margin-top: 10px;
       transform: translate(-50%, -50%);
     }
     @media all and (max-width: 499px) {
@@ -135,20 +141,8 @@ html, body{
     transition: 1s;
 
     @media all and (max-width: 650px) {
-      background-image: url("../images/header-image-04-0x288.jpg");
-      width: 10px;
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: right;
-      top: 95%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      box-shadow:10px 16px 16px 1px rgba(0,0,0,0.2);
-      cursor: pointer;
-      animation: fadeIn .5s ease-in 1 forwards;
-      transition: 1s;
+      display: none;
+
     }
 
   }
@@ -156,8 +150,8 @@ html, body{
      background-image: url("../images/hotel-at-evening-0x288.jpg");
      width: 400px;
      height: 200px;
-    //  max-width: 500px;
-    //  max-height: 400px;
+     max-width: 500px;
+     max-height: 400px;
      position: absolute;
      background-repeat: no-repeat;
      background-position: right;
@@ -170,21 +164,8 @@ html, body{
      cursor: pointer;
      transition: 1s;
 
-     @media all and (max-width: 650px) {
-       background-image: url("../images/hotel-at-evening-0x288.jpg");
-       width: 10px;
-       position: absolute;
-       background-repeat: no-repeat;
-       background-position: right;
-       top: 95%;
-       left: 50%;
-       margin-right: -50%;
-       transform: translate(-50%, -50%);
-       border-radius: 10px;
-       box-shadow:10px 16px 16px 1px rgba(0,0,0,0.2);
-       cursor: pointer;
-       animation: fadeIn .5s ease-in 1 forwards;
-       transition: 1s;
+     @media all and (max-width: 550px) {
+       display: none;
      }
 
    }
@@ -231,11 +212,12 @@ html, body{
       }
 }
 
-//container
+//container for gallerry
 .container_img {
     width: 100%;
     margin: 0 auto;
     font-size: 0;
+    cursor: pointer;
 
     .container {
       position: relative;
@@ -294,6 +276,7 @@ html, body{
       -ms-transform: translate(-50%, -50%);
     }
 }
+//main container for text lay-out
 .container-text {
   width: 90%;
   margin:0 auto;
@@ -335,7 +318,7 @@ html, body{
     // margin-bottom: 60px;
     word-spacing: 5px;
   }
-
+//layout for 3 pictures in a row (desktop)
   .room_gallery {
     width: 100%;
     display: inline-block;
@@ -356,6 +339,10 @@ html, body{
       img {
         width: 100%;
         margin-bottom: 60px;
+
+        @media all and (max-width: 500px) {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -412,6 +399,7 @@ html, body{
     font-size: 20px;
     margin: 10px;
   }
+  //form
   form {
     display: block;
     font-size: 20px;
@@ -424,7 +412,7 @@ html, body{
     }
   }
 }
-
+//gap between container and every thing below
 .gap {
   width: 100%;
   height: 80px;
@@ -445,6 +433,10 @@ h1.quote {
   background-color:#64A843;
   padding: 40px 100px;
 
+  @media all and (max-width: 800px) {
+    padding:40px;
+  }
+
   div {
     display: inline-block;
     position: relative;
@@ -460,8 +452,8 @@ h1.quote {
     .map {
       border-bottom: 20px;
     }
-    .copyright {
-      text-align: right;
-    }
+  }
+  .copyright {
+    text-align: right;
   }
 }
