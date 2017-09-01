@@ -1,30 +1,64 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <link rel="stylesheet" href="../css/testing.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery užduotis</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+	<style>
+		* { box-sizing: border-box; }
+		html { font-family: Roboto, sans-serif; font-weight: 100; color: #fff; }
+		h1 { font-weight: 100; margin: 0; }
+		form.auto { max-width: 600px; width: 100%; margin: 0 auto; background-color: rgba(0,0,0,.5); border-radius: 20px 0; text-align: center; padding: 2em 1em; }
+		.banner { background-color: cadetblue; }
+		.banner-inner { max-width: 800px; width: 100%; margin: 0 auto; padding: 2em 1em; }
+		.form-inner { display: flex; flex-direction: column; }
+		.form-inner > * { margin-top: 1em; }
+		select, [type="text"] { padding: .5em 1em; border-radius: 10px 0; font-weight: 300; font-family: Roboto; text-transform: uppercase; }
+	</style>
 </head>
 <body>
-<div class="section">
-  <div>
-    <p>Hello</p>
-  </div>
-  <div class="margin">2</div>
-  <div>3</div>
-</div>
 
+	<section class="banner">
 
-<div class="flex">
-  <div>1</div>
-  <div>1</div>
-  <div>1</div>
-  <div>1</div>
-</div>
+		<div class="banner-inner">
 
+			<div class="banner-body">
 
-<div class="container">
-  <a href="#"> <img src="images/pool.jpg" alt="Avatar" class="image"></a>
-  <a href="#" class="overlay">
-    <div class="text">Hello World</div>
-  </a>
-</div>
+				<form class="auto">
 
+					<h1>Automobilių nuoma</h1>
 
+					<div class="form-inner">
+
+						<select class="audi">
+							<option value="0" selected disabled>Pasirinkite automobilį</option>
+							<option value="25">Audi A3</option>
+							<option value="50">Audi A6</option>
+							<option value="60">Audi A8</option>
+							<option value="100">Audi S6</option>
+							<option value="115">Audi S8</option>
+						</select>
+
+						<input name="days" type="text" placeholder="Įveskite dienų skaičių">
+
+						<div class="result">
+
+							<p><span>0</span> &euro;</p>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="../Js/index.js"></script>
 </body>
+</html>
