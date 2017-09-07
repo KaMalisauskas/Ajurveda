@@ -11,3 +11,28 @@ function classToggle() {
     this.classList.toggle('insertPicture2');
 }
 document.querySelector('#fade').addEventListener('click', classToggle);
+
+
+
+  $(document).ready(function () {
+
+    $('.faddingIntr p').fadeIn(2000).removeClass("hidden1");
+    $('.faddingIntr .logoIntr').fadeIn(2000, function() {
+      $('.faddingIntr .logoIntr').removeClass("hidden1");
+      $(".faddingIntr").fadeOut(1500, function() {
+          $(this).removeClass("faddingIntr");
+        });
+    });
+
+  //   $('.faddingIntr p').fadeIn(1500).removeClass("hidden1");
+  //   $('.faddingIntr .logoIntr').fadeIn(1500).removeClass("hidden1");
+  //
+  // $('.faddingIntr').on("click", function() {
+  //
+  //   $(".everything").removeClass('everything');
+  //
+  //   $(".faddingIntr").fadeOut(1500, function() {
+  //     $(this).removeClass("faddingIntr");
+  //   });
+  // });
+});
