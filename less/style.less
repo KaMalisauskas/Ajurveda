@@ -12,6 +12,11 @@ html, body{
 .hidden1 {
   display: none;
 }
+.hidden2 {
+  @media all and (max-width: 750px) {
+    display: none;
+  }
+}
 //header div
 // .everything {
 //   display: none;
@@ -28,6 +33,7 @@ html, body{
   height: 100%;
   position:fixed;
   text-align: center;
+  background-position: center;
   //transition: opacity 500 ease-in-out;
 
   p {
@@ -67,23 +73,34 @@ html, body{
   position: relative;
   background-repeat: no-repeat;
   margin-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
   @media all and (max-width: 600px) {
     min-height: 300px;
     margin-bottom: 50px;
+    background-attachment: inherit;
   }
 
   //navigational bar
   //burger
   .burger-container{
       position: relative;
-      margin: 200px auto;
-      width: 100px;
+      width: 50px;
+      margin-left: 20px;
+      margin-top: 30px;
+      position: absolute;
+      z-index: 2;
   }
 
   .burger{
       cursor: pointer;
       display: block;
+
+      @media all and (min-width: 750px) {
+        display: none;
+      }
   }
 
   .burger:before,
@@ -91,8 +108,8 @@ html, body{
   	content: "";
       background: #eee;
       display: block;
-      width: 100px;
-      height: 14px;
+      width: 50px;
+      height: 10px;
       margin-bottom: 10px;
       position: relative;
       top: 0;
@@ -101,18 +118,12 @@ html, body{
 
   .burger-container.open .burger:after{
       transform: rotate(45deg);
-      top: -12px;
+      top: -10px;
   }
 
   .burger-container.open .burger:before{
       transform: rotate(-45deg);
-      top: 12px;
-  }
-
-  .main-nav {
-  	display: none;
-  	color: #fff;
-  	margin-top: 50px;
+      top: 10px;
   }
 
   .main-nav li {
@@ -124,22 +135,35 @@ html, body{
   }
 
   nav {
-    max-width: auto;
     width: 100%;
     height: auto;
     background: transparent;
     color: white;
     padding-top: 30px;
 
+    @media all and (max-width: 750px) {
+      padding-top: 0;
+    }
+
 
     .ul-nav {
       margin: 0 auto;
-      max-width: 900px;
+      max-width: 750px;
       width: 100%;
       padding: 8px 10px;
       color: white;
       font-size: 20px;
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(255,255,255,0.9);
+      box-sizing: border-box;
+
+      @media all and (max-width: 750px) {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        background-color: @nav-color;
+        position: absolute;
+        z-index: 1;
+      }
     }
 
     //dropdown
@@ -150,6 +174,13 @@ html, body{
       display: inline-block;
       position: relative;
       display: inline-block;
+
+      @media all and (max-width: 750px) {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        z-index: 2;
+      }
 
       &:hover .dropdown-content {
           display: block;
@@ -171,6 +202,16 @@ html, body{
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 1;
           opacity: 0.9;
+
+          @media all and (max-width: 750px) {
+            display: block;
+            padding: 5px 0;
+            margin-left: 20px;
+            position: relative;
+            background: none;
+            box-shadow: none;
+
+          }
 
          li {
             list-style-type: none;
@@ -220,7 +261,7 @@ html, body{
     }
   }
   //middle changing pictures
- .insertPicture {
+ .insertPicture2 {
     background-image: url("../images/header-image-04-0x288.jpg");
     min-width: 400px;
     min-height: 200px;
@@ -229,6 +270,7 @@ html, body{
     position: absolute;
     background-repeat: no-repeat;
     background-position: right;
+    background-size: cover;
     top: 95%;
     left: 50%;
     margin-right: -50%;
@@ -242,10 +284,11 @@ html, body{
     @media all and (max-width: 650px) {
       display: none;
 
+
     }
 
   }
-  .insertPicture2 {
+  .insertPicture {
      background-image: url("../images/hotel-at-evening-0x288.jpg");
      width: 400px;
      height: 200px;
@@ -254,6 +297,7 @@ html, body{
      position: absolute;
      background-repeat: no-repeat;
      background-position: right;
+     background-size: cover;
      top: 95%;
      left: 50%;
      margin-right: -50%;
@@ -263,7 +307,7 @@ html, body{
      cursor: pointer;
      transition: 1s;
 
-     @media all and (max-width: 550px) {
+     @media all and (max-width: 650px) {
        display: none;
      }
 
@@ -509,7 +553,7 @@ html, body{
     display: block;
     font-size: 20px;
     table, th, td {
-      padding: 10px;
+      padding: 10px 5px;
     }
     .bigger {
       width: 100px;
