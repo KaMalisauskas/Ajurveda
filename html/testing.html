@@ -4,61 +4,136 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>jQuery užduotis</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
-	<style>
-		* { box-sizing: border-box; }
-		html { font-family: Roboto, sans-serif; font-weight: 100; color: #fff; }
-		h1 { font-weight: 100; margin: 0; }
-		form.auto { max-width: 600px; width: 100%; margin: 0 auto; background-color: rgba(0,0,0,.5); border-radius: 20px 0; text-align: center; padding: 2em 1em; }
-		.banner { background-color: cadetblue; }
-		.banner-inner { max-width: 800px; width: 100%; margin: 0 auto; padding: 2em 1em; }
-		.form-inner { display: flex; flex-direction: column; }
-		.form-inner > * { margin-top: 1em; }
-		select, [type="text"] { padding: .5em 1em; border-radius: 10px 0; font-weight: 300; font-family: Roboto; text-transform: uppercase; }
-	</style>
+	<link href="../css/gallery.css" rel="stylesheet">
 </head>
 <body>
 
-	<section class="banner">
+<div class="container_img">
+	  <div class="container">
+	    <img src="../images/pool.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow image">
+	  </div>
+	  <div class="container">
+	    <img src="../images/mountain.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow image">
+	  </div>
+	  <div class="column container">
+	    <img src="../images/train.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow image">
+	  </div>
+	  <div class="container">
+	    <img src="../images/elephant.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+	  </div>
 
-		<div class="banner-inner">
+		<div class="container">
+			<img src="../images/streetMusic.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+		</div>
+		<div class="container">
+			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+		</div>
+		<div class="container">
+			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+		</div>
+		<div class="container">
+			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+		</div>
+		<div class="container">
+			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+	  <span class="close cursor" onclick="closeModal()">&times;</span>
+	  <div class="modal-content">
 
-			<div class="banner-body">
+	    <div class="mySlides">
+	      <div class="numbertext">1 / 9</div>
+	        <img src="../images/pool.jpg" style="width:100%">
+	    </div>
 
-				<form class="auto">
+	    <div class="mySlides">
+	      <div class="numbertext">2 / 9</div>
+	        <img src="../images/mountain.jpg" style="width:100%">
+	    </div>
 
-					<h1>Automobilių nuoma</h1>
+	    <div class="mySlides">
+	      <div class="numbertext">3 / 9</div>
+	        <img src="../images/train.jpg" style="width:100%">
+	    </div>
 
-					<div class="form-inner">
+	    <div class="mySlides">
+	      <div class="numbertext">4 / 9</div>
+	        <img src="../images/elephant.jpg" style="width:100%">
+	    </div>
 
-						<select class="audi">
-							<option value="0" selected disabled>Pasirinkite automobilį</option>
-							<option value="25">Audi A3</option>
-							<option value="50">Audi A6</option>
-							<option value="60">Audi A8</option>
-							<option value="100">Audi S6</option>
-							<option value="115">Audi S8</option>
-						</select>
 
-						<input name="days" type="text" placeholder="Įveskite dienų skaičių">
-
-						<div class="result">
-
-							<p><span>0</span> &euro;</p>
-
-						</div>
-
-					</div>
-
-				</form>
-
+			<div class="mySlides">
+				<div class="numbertext">5 / 9</div>
+					<img src="../images/streetMusic.jpg" style="width:100%">
 			</div>
 
-		</div>
+			<div class="mySlides">
+				<div class="numbertext">6 / 9</div>
+					<img src="../images/bath.jpg" style="width:100%">
+			</div>
 
-	</section>
+			<div class="mySlides">
+				<div class="numbertext">7 / 9</div>
+					<img src="../images/bath.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">8 / 9</div>
+					<img src="../images/bath.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">9 / 9</div>
+					<img src="../images/bath.jpg" style="width:100%">
+			</div>
+
+	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	    <div class="caption-container">
+	      <p id="caption"></p>
+	    </div>
+
+	    <div class="column">
+	      <img class="demo" src="../images/pool.jpg" onclick="currentSlide(1)" alt="Nature">
+	    </div>
+
+	    <div class="column">
+	      <img class="demo" src="../images/mountain.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+	    </div>
+
+	    <div class="column">
+	      <img class="demo" src="../images/train.jpg" onclick="currentSlide(3)" alt="Mountains">
+	    </div>
+
+	    <div class="column">
+	      <img class="demo" src="../images/elephant.jpg" onclick="currentSlide(4)" alt="Lights">
+	    </div>
+
+			<div class="column">
+				<img class="demo" src="../images/streetMusic.jpg" onclick="currentSlide(5)" alt="Lights">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(6)" alt="Lights">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(7)" alt="Lights">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(8)" alt="Lights">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(9)" alt="Lights">
+			</div>
+	  </div>
+	</div>
 
 	<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-	<script src="../Js/index.js"></script>
+	<script src="../Js/testing.js"></script>
 </body>
 </html>

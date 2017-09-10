@@ -15,8 +15,12 @@
 
   <div class="header">
     <nav>
-      
-      <ul class="ul-nav">
+
+      <div class="burger-container">
+          <div class="burger"></div>
+      </div>
+
+      <ul class="ul-nav hidden2">
           <li class="dropdown"><a href="index.html"> Resort</a>
             <ul class="dropdown-content">
               <li><a href="index.html">About the Resort</a></li>
@@ -59,44 +63,129 @@
   <h1 class="gallery">Gallery</h1>
 
   <div class="container_img">
+  	  <div class="container">
+  	    <img src="../images/pool.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow image">
+  	  </div>
+  	  <div class="container">
+  	    <img src="../images/mountain.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow image">
+  	  </div>
+  	  <div class="column container">
+  	    <img src="../images/train.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow image">
+  	  </div>
+  	  <div class="container">
+  	    <img src="../images/elephant.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  	  </div>
 
-  <div class="container">
-    <img id="resize" src="../images/pool.jpg" alt="Avatar" class="image">
-  </div>
+  		<div class="container">
+  			<img src="../images/streetMusic.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  		</div>
+  		<div class="container">
+  			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  		</div>
+  		<div class="container">
+  			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  		</div>
+  		<div class="container">
+  			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  		</div>
+  		<div class="container">
+  			<img src="../images/bath.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow image">
+  		</div>
+  	</div>
+  	<div id="myModal" class="modal">
+  	  <span class="close cursor" onclick="closeModal()">&times;</span>
+  	  <div class="modal-content">
 
-  <div class="container">
-    <img src="../images/mountain.jpg" alt"Mountain" class="image">
-  </div>
+  	    <div class="mySlides">
+  	      <div class="numbertext">1 / 9</div>
+  	        <img src="../images/pool.jpg" style="width:100%">
+  	    </div>
 
-  <div class="container">
-    <img src="../images/train.jpg" alt="Train" class="image">
-  </div>
+  	    <div class="mySlides">
+  	      <div class="numbertext">2 / 9</div>
+  	        <img src="../images/mountain.jpg" style="width:100%">
+  	    </div>
 
-    <div class="container">
-      <img src="../images/elephant.jpg" alt="Elephant" class="image">
-    </div>
+  	    <div class="mySlides">
+  	      <div class="numbertext">3 / 9</div>
+  	        <img src="../images/train.jpg" style="width:100%">
+  	    </div>
 
-    <div class="container">
-      <img src="../images/streetMusic.jpg" alt"StreetMusic" class="image">
-    </div>
+  	    <div class="mySlides">
+  	      <div class="numbertext">4 / 9</div>
+  	        <img src="../images/elephant.jpg" style="width:100%">
+  	    </div>
 
-    <div class="container">
-      <img src="../images/bath.jpg" alt="Bath" class="image">
-    </div>
 
-    <div class="container">
-      <img src="../images/bath.jpg" alt="Bath" class="image">
-    </div>
+  			<div class="mySlides">
+  				<div class="numbertext">5 / 9</div>
+  					<img src="../images/streetMusic.jpg" style="width:100%">
+  			</div>
 
-    <div class="container">
-      <img src="../images/bath.jpg" alt="Bath" class="image">
-    </div>
+  			<div class="mySlides">
+  				<div class="numbertext">6 / 9</div>
+  					<img src="../images/bath.jpg" style="width:100%">
+  			</div>
 
-    <div class="container">
-      <img src="../images/bath.jpg" alt="Bath" class="image">
-    </div>
+  			<div class="mySlides">
+  				<div class="numbertext">7 / 9</div>
+  					<img src="../images/bath.jpg" style="width:100%">
+  			</div>
 
-  </div>
+  			<div class="mySlides">
+  				<div class="numbertext">8 / 9</div>
+  					<img src="../images/bath.jpg" style="width:100%">
+  			</div>
+
+  			<div class="mySlides">
+  				<div class="numbertext">9 / 9</div>
+  					<img src="../images/bath.jpg" style="width:100%">
+  			</div>
+
+  	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  	    <div class="caption-container">
+  	      <p id="caption"></p>
+  	    </div>
+
+  	    <div class="column">
+  	      <img class="demo" src="../images/pool.jpg" onclick="currentSlide(1)" alt="Nature">
+  	    </div>
+
+  	    <div class="column">
+  	      <img class="demo" src="../images/mountain.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+  	    </div>
+
+  	    <div class="column">
+  	      <img class="demo" src="../images/train.jpg" onclick="currentSlide(3)" alt="Mountains">
+  	    </div>
+
+  	    <div class="column">
+  	      <img class="demo" src="../images/elephant.jpg" onclick="currentSlide(4)" alt="Lights">
+  	    </div>
+
+  			<div class="column">
+  				<img class="demo" src="../images/streetMusic.jpg" onclick="currentSlide(5)" alt="Lights">
+  			</div>
+
+  			<div class="column">
+  				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(6)" alt="Lights">
+  			</div>
+
+  			<div class="column">
+  				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(7)" alt="Lights">
+  			</div>
+
+  			<div class="column">
+  				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(8)" alt="Lights">
+  			</div>
+
+  			<div class="column">
+  				<img class="demo" src="../images/bath.jpg" onclick="currentSlide(9)" alt="Lights">
+  			</div>
+  	  </div>
+  	</div>
 
   <div class="gap">
   </div>
