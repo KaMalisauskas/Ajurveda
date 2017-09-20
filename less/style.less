@@ -1,4 +1,4 @@
-@import "gallery.css";
+@import "gallery.less";
 @nav-color: #2F92CD;
 @shrift-color: #26683F;
 @font: italic;
@@ -183,7 +183,7 @@ html, body{
         z-index: 2;
       }
 
-      &:hover .dropdown-content {
+      &:hover .sub-menu, &:hover .dropdown-content{
           display: block;
           padding: 0;
       }
@@ -195,7 +195,7 @@ html, body{
       }
 
       //dropdown-content
-      .dropdown-content {
+      .dropdown-content, .sub-menu {
           display: none;
           position: absolute;
           background-color: @nav-color;
@@ -580,7 +580,7 @@ h1.quote {
 //footer
 .footer {
   height: auto;
-  background-color:#64A843;
+  background:linear-gradient(to top, #37ecba 0%, #72afd3 100%);  padding: 40px 100px;
   padding: 40px 100px;
 
   @media all and (max-width: 800px) {
